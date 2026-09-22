@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-relatório de UX | EAD UX, Tema 06</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="assets/js/pwa-register.js" defer></script>
+  <style>
+    body { background: #fff; }
+    .report { width: 100%; max-width: 760px; margin: 0 auto; padding: 1.5rem 1.25rem 2rem; }
+    .report h1 { font-size: 1.45rem; color: var(--primary-dark); line-height: 1.25; }
+    .report h2 { font-size: 1.05rem; margin: 1.1rem 0 0.35rem; color: var(--primary-dark); }
+    .report p, .report li { font-size: 0.95rem; line-height: 1.5; }
+    .report ul { margin: 0.2rem 0 0 1.25rem; }
+    .report li { margin-bottom: 0.25rem; }
+    .meta { color: var(--text-muted); font-size: 0.9rem; margin: 0.25rem 0 0.5rem; }
+    .report-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+    @page { size: A4; margin: 1.4cm 1.6cm; }
+    @media print {
+      .report { max-width: none; padding: 0; }
+      .report h1 { font-size: 16pt; }
+      .report h2 { font-size: 11.5pt; margin: 9pt 0 3pt; }
+      .report p, .report li { font-size: 9.5pt; line-height: 1.38; }
+      .report li { margin-bottom: 2pt; }
+      .meta { font-size: 9pt; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link no-print" href="#conteudo">Pular para o relatório</a>
+  <main id="conteudo" class="report" tabindex="-1">
+    <h1>Mini-relatório de UX</h1>
+    <p class="meta">Ambiente EAD assíncrono, Tema 06: Mapeamento de Feedbacks.<br>
+    Público: alunos do Ensino Técnico em Desenvolvimento de Sistemas.</p>
+
+    <h2>1. Decisões de interface e justificativa</h2>
+    <ul>
+      <li>A barra superior é fixa e igual em todas as páginas, com as cinco etapas numeradas. O aluno vê a trilha inteira e a etapa atual em qualquer tela. No celular ela vira um menu recolhido, como a apostila recomenda para menus extensos.</li>
+      <li>Na página Conteúdo, as seções ficam em um menu lateral (aside) que marca a seção que está na tela. Os títulos aparecem abaixo da barra fixa quando o aluno clica em um link.</li>
+      <li>O texto fica solto na página, sem caixas, organizado por títulos, parágrafos curtos e listas. Ele segue o Tema 06 da apostila, em frases diretas.</li>
+      <li>O áudio fica no topo do conteúdo, antes do texto, para quem prefere ouvir. A vídeoaula usa o player nativo, com a duração visível.</li>
+      <li>O material em PDF é a própria apostila e só está disponível para download.</li>
+      <li>O mapa de feedbacks e o quiz usam o mesmo modelo: uma pergunta por vez, barra de progresso, dica, explicação a cada resposta e progresso salvo. Acertos e erros aparecem com texto e ícone, além da cor.</li>
+      <li>A Home lista os dez temas da apostila, com os nove indisponíveis em cinza, e o Tema 06 é o único que abre.</li>
+    </ul>
+
+    <h2>2. Acessibilidade e responsividade</h2>
+    <ul>
+      <li>O contraste do texto passa de 4,5:1 e o das bordas de campos passa de 3:1. O foco do teclado é visível e há um link para pular ao conteúdo.</li>
+      <li>Os campos têm rótulo visível, os erros aparecem ao lado do campo e as regras da senha se atualizam ao digitar. Um botão mostra ou oculta a senha.</li>
+      <li>Os alvos de toque têm pelo menos 44 px, a fonte é de alta legibilidade (Atkinson Hyperlegible) e o layout se ajusta de 320 px até o computador.</li>
+      <li>Imagens, quando usadas, recebem texto alternativo.</li>
+    </ul>
+
+    <h2>3. Estrutura das telas</h2>
+    <ul>
+      <li>Tela 01, portal de acesso: login com e-mail ou usuário e senha, "Esqueci minha senha" e cadastro simulado.</li>
+      <li>Tela 02, ambiente de aprendizagem: Conteúdo com áudio e texto, Vídeoaula, Material PDF, Mapa de feedbacks e Quiz.</li>
+    </ul>
+
+    <h2>4. Tecnologias</h2>
+    <p>HTML, CSS e JavaScript em arquivos separados. O login e o progresso são simulados no navegador, com localStorage.</p>
+
+    <div class="report-actions no-print">
+      <a href="home.html" class="btn btn-outline">Ir ao ambiente</a>
+      <button type="button" class="btn btn-primary" onclick="window.print()">Imprimir ou salvar em PDF</button>
+    </div>
+  </main>
+</body>
+</html>

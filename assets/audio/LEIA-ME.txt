@@ -1,0 +1,8 @@
+COLOQUE AQUI O SEU ÁUDIO
+
+Nome esperado pelo site:  resumo-tema06.mp3
+Onde é usado:             conteudo.html (player entre os cards de recursos e o texto)
+
+Para usar outro nome ou formato, altere o atributo src do <source> dentro de
+<audio id="audioPlayer"> em conteudo.html (procure por "ÁUDIO:").
+Enquanto o arquivo não existir, a página mostra um aviso amigável no lugar do erro.

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de feedbacks | Tema 06, EAD UX</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="assets/js/pwa-register.js" defer></script>
+</head>
+<body class="has-navbar">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container navbar-inner">
+      <a class="navbar-brand" href="home.html">
+        <span class="brand-icon" aria-hidden="true">UX</span>
+        <div id="Voltar-Logo">
+          <span class="brand-text">Experiência do Usuário</span>
+          <small id="baixo">(clique para voltar à home)</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+      </button>
+      <div class="navbar-collapse" id="menu">
+        <nav aria-label="Etapas do Tema 06">
+          <ul class="navbar-nav">
+            <li><a class="nav-link" href="conteudo.html">1. Conteúdo</a></li>
+            <li><a class="nav-link" href="video.html">2. Vídeoaula</a></li>
+            <li><a class="nav-link" href="material.html">3. Material PDF</a></li>
+            <li><a class="nav-link" href="mapa-feedbacks.html" aria-current="page">4. Mapa de feedbacks</a></li>
+            <li><a class="nav-link" href="quiz.html">5. Quiz</a></li>
+          </ul>
+        </nav>
+        <div class="navbar-user">
+          <span>Olá, <span class="user-name" id="userName">Aluno</span></span>
+          <a href="index.html" class="btn btn-outline btn-sm" data-logout>Sair</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container page" tabindex="-1">
+    <p class="page-kicker">Tema 06: Mapeamento de feedbacks</p>
+    <h1>Mapa de feedbacks</h1>
+    <p class="lead">Dez situações para classificar nas cinco categorias do framework HEART, com explicação a cada resposta e progresso salvo neste navegador.</p>
+    <div class="panel" id="mapaRoot">
+      <div class="panel-toolbar"><span class="toolbar-title">Em qual categoria do HEART esta situação se encaixa?</span></div>
+      <div id="dynamicContent" class="panel-content"></div>
+    </div>
+    <div id="mapaLive" class="visually-hidden" aria-live="polite"></div>
+    <noscript><p class="media-msg">Esta atividade precisa de JavaScript ativado.</p></noscript>
+  </main>
+
+  <nav class="page-nav" aria-label="Navegação entre as etapas">
+    <div class="container">
+      <p class="page-nav-step">Etapa 4 de 5</p>
+      <div class="page-nav-links">
+        <a class="btn btn-outline btn-prev" href="material.html" rel="prev"><span class="btn-label">Anterior</span><span class="btn-title">3. Material PDF</span></a>
+        <a class="btn btn-primary btn-next" href="quiz.html" rel="next"><span class="btn-label">Próxima</span><span class="btn-title">5. Quiz</span></a>
+      </div>
+    </div>
+  </nav>
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="assets/Apostila_Experiencia_do_Usuario.pdf" download="Apostila_Experiência_do_Usuário.pdf">Baseado na Apostila da Proz Educação</a></p>
+      <p>Ambiente EAD de Experiência do Usuário, <span id="yearNow">2026</span></p>
+    </div>
+  </footer>
+  <button type="button" class="back-to-top" id="backToTop" hidden aria-label="Voltar ao topo"></button>
+  <script src="js/storage.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/painel.js"></script>
+  <script src="js/mapa.js"></script>
+</body>
+</html>

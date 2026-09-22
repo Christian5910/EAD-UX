@@ -1,0 +1,11 @@
+COLOQUE AQUI O SEU VÍDEO
+
+Nome esperado pelo site:  videoaula-tema06.mp4   (H.264 + AAC funciona em todos os navegadores)
+Onde é usado:             video.html (procure por "VÍDEO:")
+
+Opcional
+  - Outro formato: descomente a linha <source ... .webm> em video.html.
+  - Legendas (recomendado para acessibilidade): crie um arquivo .vtt, salve como
+    legendas.vtt nesta pasta e descomente a linha <track ...> em video.html.
+  - A duração aparece sozinha acima do texto quando o vídeo carrega.
+Enquanto o arquivo não existir, a página mostra um aviso amigável no lugar do erro.
